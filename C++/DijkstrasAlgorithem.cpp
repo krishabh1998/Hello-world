@@ -23,7 +23,7 @@ public:
     void addEdge(int s, int d, int wt){
         adjList[s].push_back(make_pair(d,wt)); 
     }
-    int dijikstra(int s, int d){                       ///algorithm to find shortest distance
+    int dijikstra(int s, int d){                       ///algorithm to find shortest distance.
         priority_queue<pii,vector<pii>,comp> pq;
         int * distance=new int[V];
         for (int i=0;i<V;i++) distance[i]=100000; 
