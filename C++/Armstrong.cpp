@@ -12,9 +12,9 @@ while( no!= 0){
     no=no/10;
 }
 if(arm==d)
-  cout<<"Yes "<<no<<" is an armstrong number"<<endl;
+  cout<<"Yes "<<d<<" is an armstrong number"<<endl;
 else
-   cout<<"No "<<no<<" is not an armstrong number"<<endl;
+   cout<<"No "<<d<<" is not an armstrong number"<<endl;
 
 return 0;
 }
