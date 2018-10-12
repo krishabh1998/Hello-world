@@ -4,7 +4,7 @@
 using namespace std;
 typedef pair<int,int> pii;
 
-class comp{ /// comparission in priority queue
+class comp{                                         /// comparision in priority queue
 public:
     bool operator()(pii a, pii b){
         return a.second>b.second;
@@ -23,7 +23,7 @@ public:
     void addEdge(int s, int d, int wt){
         adjList[s].push_back(make_pair(d,wt)); 
     }
-    int dijikstra(int s, int d){ ///algorigthm to find shortest distance
+    int dijikstra(int s, int d){                       ///algorithm to find shortest distance
         priority_queue<pii,vector<pii>,comp> pq;
         int * distance=new int[V];
         for (int i=0;i<V;i++) distance[i]=100000; 
@@ -37,7 +37,7 @@ public:
             if (distance[curVer]!=curDist) continue;
                  it!=adjList[curVer].end();it++){
                 int childDist=it->second+curDist;
-                if (childDist<distance[it->first]){ ///check the distance shortest ahi tabhi update krna
+                if (childDist<distance[it->first]){                   ///check the distance shortest hai tabhi update krna
                     pq.push(make_pair(it->first,childDist));
                     distance[it->first]=childDist;
                 }
